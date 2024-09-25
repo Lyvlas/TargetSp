@@ -1,0 +1,17 @@
+function inverterString(str) {
+    let stringInvertida = ""; 
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        stringInvertida += str[i];
+    }
+
+    return stringInvertida;
+}
+
+const userInput = prompt("Informe uma string para inverter:");
+
+const stringParaInverter = userInput ? userInput : "Paulo";
+
+const resultado = inverterString(stringParaInverter);
+console.log(`String original: ${stringParaInverter}`);
+console.log(`String invertida: ${resultado}`);
