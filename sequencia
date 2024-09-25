@@ -1,0 +1,21 @@
+function fibonacciCheck(num) {
+    let fibonacciSequence = [0, 1]; // Inicializa a sequência com os dois primeiros números
+    let nextFibonacci = 1;
+
+    while (nextFibonacci <= num) {
+        fibonacciSequence.push(nextFibonacci);
+        nextFibonacci = fibonacciSequence[fibonacciSequence.length - 1] + fibonacciSequence[fibonacciSequence.length - 2];
+    }
+
+    if (fibonacciSequence.includes(num)) {
+        console.log(`${num} pertence à sequência de Fibonacci.`);
+    } else {
+        console.log(`${num} não pertence à sequência de Fibonacci.`);
+    }
+}
+
+const userInput = prompt("Informe um número para verificar se pertence à sequência de Fibonacci:");
+
+const numberToCheck = userInput ? parseInt(userInput) : 21;
+
+fibonacciCheck(numberToCheck);
